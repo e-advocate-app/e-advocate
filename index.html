@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08090b">
+<title>e-Advocate — Your legal workspace | Download APK</title>
+<meta name="description" content="e-Advocate: Law Library, AI Legal Assistant, case and client management, hearing dates, drafting desk and more. Download the Android app.">
+<meta property="og:title" content="e-Advocate — Your legal workspace">
+<meta property="og:description" content="Law Library, AI Legal Assistant, cases, clients, hearings and drafting — all in one Android app.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08090b;--bg2:#0e1013;--card:#121419;--line:rgba(201,162,75,.26);--line2:rgba(255,255,255,.08);
+  --gold:#c9a24b;--gold2:#f0d489;--text:#f4f1ea;--muted:#9a968b;--green:#4ade80;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:Inter,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+svg.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* top bar */
+.nav{position:sticky;top:0;z-index:50;background:rgba(8,9,11,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line2);padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
+.logo{width:34px;height:34px;border-radius:10px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold2);background:#17130a;overflow:hidden}
+.logo img{width:100%;height:100%;object-fit:cover}
+.nav-links{display:none;gap:26px;font-size:14px;color:var(--muted)}
+.nav-links a:hover{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;font:inherit;font-weight:700;border-radius:14px;padding:14px 26px;font-size:16px;transition:transform .15s,box-shadow .2s}
+.btn:active{transform:scale(.98)}
+.btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.btn-gold{background:linear-gradient(135deg,#f0d489,#c9a24b 55%,#b38a35);color:#241a00;box-shadow:0 12px 32px rgba(201,162,75,.30)}
+.btn-gold:hover{box-shadow:0 16px 40px rgba(201,162,75,.42)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.btn-sm{padding:9px 16px;font-size:14px;border-radius:11px}
+
+/* hero */
+.hero{position:relative;padding:54px 0 26px;text-align:center;background:radial-gradient(90% 60% at 50% -10%,rgba(201,162,75,.26),transparent 62%)}
+.app-icon{width:104px;height:104px;margin:0 auto 20px;border-radius:26px;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold2);background:radial-gradient(circle,#1d1809,#0b0b0c);box-shadow:0 0 70px rgba(201,162,75,.30);overflow:hidden}
+.app-icon svg{width:54px;height:54px}
+.app-icon img{width:100%;height:100%;object-fit:cover}
+.eyebrow{font-size:12px;letter-spacing:3px;color:var(--gold);font-weight:600}
+h1{font-family:var(--serif);font-size:clamp(36px,8vw,64px);line-height:1.1;margin:10px 0 14px;font-weight:700}
+h1 em{font-style:normal;color:var(--gold2)}
+.lead{max-width:600px;margin:0 auto;color:#b9b5aa;font-size:clamp(15px,2.4vw,18px)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.vtag{margin-top:14px;font-size:13px;color:var(--muted)}
+.vtag b{color:var(--gold2);font-weight:600}
+
+/* stats strip (like Play Store) */
+.stats{margin:34px auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:0;max-width:760px;border:1px solid var(--line);border-radius:18px;background:var(--card);overflow:hidden}
+.stat{padding:16px 8px;text-align:center;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.stat:nth-child(2n){border-right:0}
+.stat:nth-last-child(-n+2){border-bottom:0}
+.stat b{display:block;font-size:19px;color:var(--gold2);font-weight:700}
+.stat span{font-size:12px;color:var(--muted);letter-spacing:.4px}
+
+/* sections */
+section{padding:62px 0}
+.sec-h{text-align:center;margin-bottom:34px}
+.sec-h h2{font-family:var(--serif);font-size:clamp(28px,5vw,40px);line-height:1.2;margin-top:6px}
+.sec-h p{color:var(--muted);margin-top:8px;max-width:560px;margin-left:auto;margin-right:auto}
+
+/* screenshots */
+.shots{display:flex;gap:16px;overflow-x:auto;padding:6px 20px 18px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;justify-content:flex-start}
+.shot{flex:0 0 auto;width:210px;aspect-ratio:9/19;border-radius:28px;border:1.5px solid var(--line);background:linear-gradient(180deg,#14161b,#0b0c0f);scroll-snap-align:center;position:relative;overflow:hidden;box-shadow:0 22px 50px rgba(0,0,0,.55)}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.shot .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--gold);font-size:13px;padding:18px;text-align:center}
+.shot .ph svg{width:34px;height:34px}
+.shot .ph small{color:var(--muted);font-size:11px}
+
+/* features */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.f{padding:22px;border:1px solid var(--line2);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));transition:border-color .2s,transform .2s}
+.f:hover{border-color:var(--line);transform:translateY(-3px)}
+.f .ico{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;color:var(--gold2);background:rgba(201,162,75,.10);border:1px solid var(--line);margin-bottom:14px}
+.f h3{font-size:17px;font-weight:600;margin-bottom:6px}
+.f p{font-size:14px;color:var(--muted)}
+
+/* whats new + update */
+.two{display:grid;grid-template-columns:1fr;gap:18px}
+.panel{border:1px solid var(--line);border-radius:22px;padding:24px;background:var(--card);box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.panel h3{font-family:var(--serif);font-size:24px;margin-bottom:4px}
+.panel .sub{font-size:13px;color:var(--muted);margin-bottom:14px}
+.chip{display:inline-block;font-size:11px;letter-spacing:1.3px;color:var(--gold2);border:1px solid var(--line);border-radius:99px;padding:4px 12px;margin-bottom:12px;background:rgba(201,162,75,.08)}
+.li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line2);font-size:15px}
+.li:last-child{border-bottom:0}
+.li i{flex:0 0 22px;height:22px;border-radius:50%;background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.4);display:flex;align-items:center;justify-content:center;margin-top:1px}
+.li i svg{width:12px;height:12px;fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.upd{background:radial-gradient(120% 90% at 50% -20%,rgba(201,162,75,.20),transparent 60%),var(--card)}
+.upd .btn{width:100%;margin-top:18px}
+.steps{counter-reset:s;list-style:none;margin-top:6px}
+.steps li{counter-increment:s;position:relative;padding:11px 0 11px 44px;font-size:14.5px;color:#cfcabd;border-bottom:1px solid var(--line2)}
+.steps li:last-child{border-bottom:0}
+.steps li:before{content:counter(s);position:absolute;left:0;top:9px;width:30px;height:30px;border-radius:50%;border:1px solid var(--gold);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+
+/* faq */
+details{border:1px solid var(--line2);border-radius:14px;padding:16px 18px;margin-bottom:10px;background:rgba(255,255,255,.02)}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--gold2);font-size:20px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{margin-top:10px;color:var(--muted);font-size:14.5px}
+
+footer{padding:34px 0 calc(34px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line2);text-align:center;color:#6f6c64;font-size:13px}
+footer b{color:var(--gold2);font-weight:600}
+
+@media(min-width:760px){
+  .nav-links{display:flex}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .stat{border-bottom:0!important;border-right:1px solid var(--line2)!important}
+  .stat:last-child{border-right:0!important}
+  .two{grid-template-columns:1fr 1fr}
+  .shots{justify-content:center}
+  .hero{padding:80px 0 34px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="logo" id="navLogo"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3v17M7 20h10M4 7h16M6.5 7l-3 7a3 3 0 0 0 6 0zM17.5 7l-3 7a3 3 0 0 0 6 0z"/></svg></span>
+      e-Advocate
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#screens">Screenshots</a>
+      <a href="#update">What’s new</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-gold btn-sm dl" href="#">Download</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding-bottom:26px">
+    <div class="wrap">
+      <div class="app-icon" id="heroIcon"><svg class="ic" viewBox="0 0 24 24" style="stroke-width:1.5"><path d="M12 3v17M7 20h10M4 7h16M6.5 7l-3 7a3 3 0 0 0 6 0zM17.5 7l-3 7a3 3 0 0 0 6 0z"/></svg></div>
+      <div class="eyebrow">e-ADVOCATE · ANDROID APP</div>
+      <h1>Your complete <em>legal workspace</em>,<br>in your pocket</h1>
+      <p class="lead">Law Library, AI Legal Assistant, cases, clients, hearing dates and a drafting desk — everything an advocate needs, in one premium app.</p>
+      <div class="cta">
+        <a class="btn btn-gold dl" href="#"><svg viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download APK</a>
+        <a class="btn btn-ghost" href="#features">Explore features</a>
+      </div>
+      <div class="vtag" id="vtag">Latest version · <b>checking…</b></div>
+
+      <div class="stats">
+        <div class="stat"><b id="sVer">Latest</b><span>VERSION</span></div>
+        <div class="stat"><b>~9 MB</b><span>SIZE</span></div>
+        <div class="stat"><b>Android</b><span>PLATFORM</span></div>
+        <div class="stat"><b>7 days</b><span>FREE TRIAL</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens" style="padding-top:34px">
+    <div class="wrap sec-h">
+      <div class="eyebrow">PREVIEW</div>
+      <h2>See it in action</h2>
+      <p>A clean, dark, premium interface made for long working days.</p>
+    </div>
+    <div class="shots" id="shots"></div>
+  </section>
+
+  <section id="features" style="background:var(--bg2)">
+    <div class="wrap">
+      <div class="sec-h">
+        <div class="eyebrow">FEATURES</div>
+        <h2>Everything for your practice</h2>
+        <p>Built around the daily work of Indian advocates.</p>
+      </div>
+      <div class="grid" id="fgrid"></div>
+    </div>
+  </section>
+
+  <section id="update">
+    <div class="wrap">
+      <div class="sec-h">
+        <div class="eyebrow">UPDATES</div>
+        <h2>What’s new &amp; how to update</h2>
+      </div>
+      <div class="two">
+        <div class="panel">
+          <span class="chip" id="newChip">LATEST VERSION</span>
+          <h3>What’s new</h3>
+          <div class="sub">Changes in the newest release</div>
+          <div id="newList"></div>
+        </div>
+        <div class="panel upd">
+          <span class="chip">UPDATE</span>
+          <h3>Already installed?</h3>
+          <div class="sub">Update in one step. Your data stays safe.</div>
+          <ol class="steps">
+            <li>Tap <b>Update now</b> and wait for the download.</li>
+            <li>Open the downloaded file and tap <b>Install</b>.</li>
+            <li>If asked, allow “Install from this source”.</li>
+            <li>Open e-Advocate — you’re on the latest version.</li>
+          </ol>
+          <a class="btn btn-gold dl" href="#"><svg viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg><span id="updTxt">Update now</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="background:var(--bg2)">
+    <div class="wrap" style="max-width:760px">
+      <div class="sec-h"><div class="eyebrow">HELP</div><h2>Questions, answered</h2></div>
+      <details><summary>How do I install the app?</summary><p>Download the APK, open it from your notifications or the Downloads folder and tap Install. If Android asks, allow installing from this source once.</p></details>
+      <details><summary>Will I lose my data when I update?</summary><p>No. Install the new version over the old one and your account and data remain as they were.</p></details>
+      <details><summary>Is there a free trial?</summary><p>Yes. Choose the free plan to get a 7-day free trial. After that, you can pick a plan that fits your practice.</p></details>
+      <details><summary>The install is blocked. What should I do?</summary><p>Open Settings, search for “Install unknown apps”, allow it for your browser, and tap the downloaded file again.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>e-Advocate</b> · Your legal workspace</p>
+    <p style="margin-top:6px">© <span id="yr"></span> e-Advocate. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ===== EDIT THESE TWO LINES IF NEEDED ===== */
+  var APK = 'https://github.com/e-Advocate-update/e-advocate/releases/latest/download/e-advocate.apk';
+  var VERSION_URL = 'https://billowing-mode-f00f.advtklaw.workers.dev/version.json';
+  /* Screenshots: put images in a "shots" folder named 1.jpg, 2.jpg, 3.jpg, 4.jpg ... */
+  var SHOTS = ['shots/1.jpg','shots/2.jpg','shots/3.jpg','shots/4.jpg'];
+  /* ========================================= */
+
+  var $=function(x){return document.getElementById(x)};
+  function E(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  var TICK='<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+
+  /* download buttons */
+  [].forEach.call(document.querySelectorAll('a.dl'),function(a){a.href=APK;a.setAttribute('rel','noopener')});
+  $('yr').textContent=new Date().getFullYear();
+
+  /* real app icon if icon-512.png exists beside this page */
+  var im=new Image();im.onload=function(){
+    $('heroIcon').innerHTML='<img src="icon-512.png" alt="e-Advocate">';
+    $('navLogo').innerHTML='<img src="icon-512.png" alt="">';
+  };im.src='icon-512.png';
+
+  /* features */
+  var P={
+    book:'M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3zM4 17a3 3 0 0 1 3-3h12',
+    chat:'M4 5h16v11H9l-5 4z',
+    case:'M3 8h18v12H3zM9 8V5h6v3',
+    users:'M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 20a6 6 0 0 1 12 0M17 8a3 3 0 0 1 0 6M21 20a5 5 0 0 0-4-5',
+    cal:'M4 6h16v14H4zM4 10h16M8 3v4M16 3v4',
+    file:'M6 3h8l4 4v14H6zM14 3v4h4M9 13h6M9 17h6',
+    pen:'M4 20l4-1 11-11-3-3L5 16zM14 6l3 3',
+    scale:'M12 3v17M7 20h10M4 7h16M6.5 7l-3 7a3 3 0 0 0 6 0zM17.5 7l-3 7a3 3 0 0 0 6 0z',
+    news:'M5 4h14v16H5zM8 8h8M8 12h8M8 16h5',
+    bell:'M6 17V11a6 6 0 0 1 12 0v6l2 2H4zM10 21h4',
+    chart:'M4 20V4M4 20h16M8 16v-5M12 16V8M16 16v-3',
+    wallet:'M3 7h16a2 2 0 0 1 2 2v9H5a2 2 0 0 1-2-2zM3 7l2-3h12M17 13h2'
+  };
+  var F=[
+    ['book','Law Library','Acts, codes and e-books — BNS, BNSS, BSA, CPC, Constitution and more — with a secure in-app reader.'],
+    ['chat','AI Legal Assistant','Ask legal questions and get drafting help in plain language, any time.'],
+    ['case','My Cases','Create and track every matter with status, forum and case number.'],
+    ['users','Clients','A professional client directory with mobile, email and address.'],
+    ['cal','Hearings &amp; Dates','Never miss a date. Track next hearings and the work for each.'],
+    ['file','Documents checklist','A practical file checklist for filing: vakalatnama, affidavits, court fee and more.'],
+    ['pen','Drafting Desk','Prepare structured drafts and keep working copies saved for review.'],
+    ['scale','Judgments','Published judgments from your admin, instantly available in the app.'],
+    ['news','Law Updates','Official updates and notifications so you stay current.'],
+    ['chart','Reports &amp; Charts','See your practice at a glance with clean reports and charts.'],
+    ['wallet','Fees &amp; Payments','Keep a record of fees and payments for every client.'],
+    ['bell','Smart notifications','Important alerts delivered right to your phone.']
+  ];
+  $('fgrid').innerHTML=F.map(function(f){
+    return '<div class="f"><div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="'+P[f[0]]+'"/></svg></div><h3>'+f[1]+'</h3><p>'+f[2]+'</p></div>';
+  }).join('');
+
+  /* screenshots with graceful placeholder */
+  $('shots').innerHTML=SHOTS.map(function(s,i){
+    return '<div class="shot"><div class="ph"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3v17M7 20h10M4 7h16M6.5 7l-3 7a3 3 0 0 0 6 0zM17.5 7l-3 7a3 3 0 0 0 6 0z"/></svg><span>Screenshot '+(i+1)+'</span><small>Add '+E(s)+'</small></div><img src="'+E(s)+'" alt="e-Advocate screenshot '+(i+1)+'" loading="lazy" onerror="this.remove()"></div>';
+  }).join('');
+
+  /* what's new (from your version.json) */
+  function renderNew(info){
+    info=info||{};
+    var items=[];
+    String(info.notes||'').split('\n').forEach(function(l){l=l.trim();if(l&&!/:$/.test(l))items.push(l.replace(/^[-•*]\s*/,''))});
+    if(Array.isArray(info.features))info.features.forEach(function(f){items.push(String(f))});
+    if(!items.length)items=['Premium experience and performance improvements','Bug fixes and stability'];
+    $('newList').innerHTML=items.map(function(t){return '<div class="li"><i>'+TICK+'</i><span>'+E(t)+'</span></div>'}).join('');
+    if(info.version){
+      $('vtag').innerHTML='Latest version · <b>'+E(info.version)+'</b>';
+      $('sVer').textContent='v'+info.version;
+      $('newChip').textContent='VERSION '+info.version;
+      $('updTxt').textContent='Update to version '+info.version;
+    }else{
+      $('vtag').innerHTML='Latest version available';
+    }
+  }
+  renderNew({});
+  try{
+    fetch(VERSION_URL+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json()}).then(renderNew).catch(function(){});
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
